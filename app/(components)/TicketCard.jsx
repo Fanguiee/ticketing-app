@@ -1,7 +1,7 @@
 import StatusDisplay from "./StatusDisplay";
 import PriorityDisplay from "./PriorityDisplay";
-import DeleteBlock from "./DeleteBlock";
-import ProgressDisplay from "./ProgressDisplay";
+import DeleteBlock from "./DeleteBlock.jsx";
+import ProgressDisplay from "./ProgressDisplay.jsx";
 import Link from "next/link";
 
 const TicketCard = ({ ticket }) => {

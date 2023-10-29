@@ -1,35 +1,38 @@
-import { faFire } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAppleWhole,
+  faCircleHalfStroke,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const PriorityDisplay = ({ priority }) => {
   return (
     <div className="flex justify-start align-baseline">
       <FontAwesomeIcon
-        icon="fa-solid fa-person-walking-luggage"
+        icon={faAppleWhole}
         className={` pr-1 ${
           priority > 0 ? " text-red-400" : " text-slate-400"
         }`}
       />
       <FontAwesomeIcon
-        icon="fa-solid fa-person-walking-luggage"
+        icon={faCircleHalfStroke}
         className={` pr-1 ${
           priority > 1 ? " text-red-400" : " text-slate-400"
         }`}
       />
       <FontAwesomeIcon
-        icon="fa-solid fa-person-walking-luggage"
+        icon={faCircleHalfStroke}
         className={`  pr-1 ${
           priority > 2 ? " text-red-400" : " text-slate-400"
         }`}
       />
       <FontAwesomeIcon
-        icon={faFire}
+        icon={faAppleWhole}
         className={` pr-1 ${
           priority > 3 ? " text-red-400" : " text-slate-400"
         }`}
       />
       <FontAwesomeIcon
-        icon={faFire}
+        icon={faAppleWhole}
         className={` ${priority > 4 ? " text-red-400" : " text-slate-400"}`}
       />
     </div>
