@@ -3,6 +3,7 @@ import TicketForm from "@/app/(components)/TicketForm";
 const getTicketById = async (id) => {
   try {
     const res = await fetch(`http://localhost:3000/api/Tickets/${id}`, {
+      method: "GET",
       cache: "no-store",
     });
 
@@ -18,9 +19,9 @@ const getTicketById = async (id) => {
 
 let updateTicketData = {};
 const TicketPage = async ({ params }) => {
-  const EDITMODE = params.id === "new" ? true : false; //Tickecpage/new or TicketPage/123?
+  const EDITMODE = params.id === "new" ? false : true; //Tickecpage/new or TicketPage/123?
 
-  if (EDITMODE) {
+  if (!EDITMODE) {
     updateTicketData = {
       _id: "new",
     };

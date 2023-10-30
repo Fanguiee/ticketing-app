@@ -14,11 +14,30 @@ const getTickets = async () => {
 
 const Home = async () => {
   const { tickets } = await getTickets();
-  return tickets.map((ticket) => (
-    <div key={ticket._id}>
-      <TicketCard ticket={ticket} />
+
+  const uniqueCategories = [
+    ...new Set(tickets?.map(({ category }) => category)),
+  ];
+
+  return (
+    <div>
+      <div>
+        {tickets &&
+          uniqueCategories?.map((thisCategory, categoryIndex) => (
+            <div key={categoryIndex}>
+              <h2>{thisCategory}</h2>
+              <div className="md:grid-cols-2 lg:grid grid-cols-2 xl:grid-cols-4">
+                {tickets
+                  .filter((ticket) => ticket.category === thisCategory)
+                  .map((thisTicket, ticketId) => (
+                    <TicketCard key={ticketId} ticket={thisTicket} />
+                  ))}
+              </div>
+            </div>
+          ))}
+      </div>
     </div>
-  ));
+  );
 };
 
 export default Home;
