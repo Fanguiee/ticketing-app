@@ -1,6 +1,12 @@
+## About the App
+
+This is a ticketing app where people can manage tickets about different problems.You can create Tickets by clicking the ticket icon on the top left. It's required to givie a title, description, category, and progress. By clicking on a ticket you can edit it.
+
+![grafik](https://github.com/Fanguiee/ticketing-app/assets/93588379/ed481276-4436-445d-b04f-9173d0cfc178)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Getting Started 
 
 First, run the development server:
 
